@@ -3,9 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
-
 import './Register.css';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { Form } from 'react-bootstrap';
+
 
 
 const Register = () => {
@@ -42,6 +43,9 @@ const Register = () => {
            <input type="email" name="email" id="" placeholder='email adress' required />
            
            <input type="password" name="password" id="" placeholder='password' required/>
+           <Form.Group className="mb-3" controlId="formBasicCheckbox">
+               <Form.Check type="checkbox" label="accept Genius Car Terms and condition" />
+            </Form.Group>
            <input type="submit" value="Register" />
 
          </form>
