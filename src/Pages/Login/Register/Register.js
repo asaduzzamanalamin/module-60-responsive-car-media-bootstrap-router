@@ -5,6 +5,7 @@ import auth from '../../../firebase.init';
 
 
 import './Register.css';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 
 const Register = () => {
@@ -45,6 +46,7 @@ const Register = () => {
 
          </form>
          <p>Already have an account <Link to={'/login'} className='text-danger pe-auto text-decoration-none' onClick={navigateLogIn}>Please LogIn</Link></p>
+         <SocialLogin></SocialLogin>
       </div>
    );
 };
